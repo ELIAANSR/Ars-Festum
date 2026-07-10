@@ -1,0 +1,27 @@
+# Ars Festum — robots.txt
+# Deploy at the site root: https://arsfestum.com/robots.txt
+
+# Standard search crawlers
+User-agent: *
+Allow: /
+
+# AI / answer-engine crawlers — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://arsfestum.com/sitemap.xml
