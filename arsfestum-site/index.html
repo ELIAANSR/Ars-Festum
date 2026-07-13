@@ -959,7 +959,7 @@ section{ padding:clamp(86px,13vh,190px) var(--edge); }
     <div class="ft-top">
       <div class="ft-invite reveal">
         <h2 class="ft-headline">Tell us what you <em>imagine.</em></h2>
-        <a class="ft-mail" href="/cdn-cgi/l/email-protection#1f767179705f7e6d6c797a6c6b6a72317c7072"><span class="__cf_email__" data-cfemail="5b32353d341b3a29283d3e282f2e3675383436">[email&#160;protected]</span><span class="ft-arrow" aria-hidden="true">→</span></a>
+        <a class="ft-mail" href="mailto:info@arsfestum.com">info@arsfestum.com<span class="ft-arrow" aria-hidden="true">→</span></a>
       </div>
       <dl class="ft-details reveal">
         <div class="ft-row">
@@ -982,7 +982,7 @@ section{ padding:clamp(86px,13vh,190px) var(--edge); }
     </div>
     <div class="ft-base reveal">
       <div class="ft-wordmark" aria-hidden="true">Ars Festum</div>
-      <p class="ft-credit"><a href="/cdn-cgi/l/email-protection#2a43444c456a4b58594c4f595e5f4704494547">Nadja Rothkirch, Founder</a><span class="ft-sep">/</span>Mallorca, since 2003</p>
+      <p class="ft-credit"><a href="mailto:info@arsfestum.com">Nadja Rothkirch, Founder</a><span class="ft-sep">/</span>Mallorca, since 2003</p>
     </div>
   </div>
   <div class="ft-legal">
@@ -1063,7 +1063,7 @@ section{ padding:clamp(86px,13vh,190px) var(--edge); }
   </div>
 </aside>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   "use strict";
 
@@ -1099,12 +1099,12 @@ section{ padding:clamp(86px,13vh,190px) var(--edge); }
   /* Per-image continuous drift. Values are scale, then translate X/Y as %.
      These transforms never reset — only opacity crossfades at the cut. */
   const DRIFT = {
-    "flower-garden": { s0:1.05, x0:"0%",    y0:"0.4%",  s1:1.11, x1:"-1.4%", y1:"-1%",   dur:18, delay:-2 },
-    "lemon-table":   { s0:1.10, x0:"1.2%",  y0:"0.8%",  s1:1.04, x1:"0%",    y1:"0%",    dur:20, delay:-7 },
-    "floral-arch":   { s0:1.05, x0:"-1.2%", y0:"0.8%",  s1:1.11, x1:"0.8%",  y1:"-0.5%", dur:17, delay:-4 },
-    "pool-script":   { s0:1.06, x0:"1.6%",  y0:"-0.4%", s1:1.10, x1:"-1.2%", y1:"0.5%",  dur:19, delay:-11 },
-    "chandeliers":   { s0:1.05, x0:"-0.6%", y0:"0.6%",  s1:1.10, x1:"1%",    y1:"-0.8%", dur:22, delay:-9 },
-    "candle-rock":   { s0:1.05, x0:"0.3%",  y0:"0%",    s1:1.11, x1:"-1%",   y1:"-1.1%", dur:21, delay:-3 }
+    "flower-garden": { s0:1.05, x0:"0%",    y0:"0.4%",  s1:1.11, x1:"-1.4%", y1:"-1%",   dur:18, delay:-2,  foc:"36% 52%" },
+    "lemon-table":   { s0:1.10, x0:"1.2%",  y0:"0.8%",  s1:1.04, x1:"0%",    y1:"0%",    dur:20, delay:-7,  foc:"50% 50%" },
+    "floral-arch":   { s0:1.05, x0:"-1.2%", y0:"0.8%",  s1:1.11, x1:"0.8%",  y1:"-0.5%", dur:17, delay:-4,  foc:"50% 45%" },
+    "pool-script":   { s0:1.06, x0:"1.6%",  y0:"-0.4%", s1:1.10, x1:"-1.2%", y1:"0.5%",  dur:19, delay:-11, foc:"50% 50%" },
+    "chandeliers":   { s0:1.05, x0:"-0.6%", y0:"0.6%",  s1:1.10, x1:"1%",    y1:"-0.8%", dur:22, delay:-9,  foc:"50% 50%" },
+    "candle-rock":   { s0:1.05, x0:"0.3%",  y0:"0%",    s1:1.11, x1:"-1%",   y1:"-1.1%", dur:21, delay:-3,  foc:"40% 56%" }
   };
 
   const stage = document.getElementById("heroStage");
@@ -1128,7 +1128,8 @@ section{ padding:clamp(86px,13vh,190px) var(--edge); }
       img.style.cssText =
         "--s0:"+d.s0+";--x0:"+d.x0+";--y0:"+d.y0+
         ";--s1:"+d.s1+";--x1:"+d.x1+";--y1:"+d.y1+
-        ";--dur:"+d.dur+"s;--delay:"+d.delay+"s";
+        ";--dur:"+d.dur+"s;--delay:"+d.delay+"s"+
+        ";object-position:"+(d.foc||"50% 50%");
       slide.appendChild(img);
       stage.appendChild(slide);
       // progress segment for this frame
